@@ -17,3 +17,6 @@
 
 /* menu */
 @import url(/src/css/components/menu.css);
+
+/* home */
+@import url(/src/css/components/home.css);
