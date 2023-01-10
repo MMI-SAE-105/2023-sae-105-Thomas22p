@@ -1,6 +1,6 @@
 p {
     font-family: 'poppins';
-    font-size: var(--s);
+    font-size: var(--p);
     line-height: 145%;
 }
 
@@ -32,7 +32,10 @@ a:hover {
     text-decoration: underline;
 }
 
-
 body {
-    padding: 0 20px;
+    margin: 0;
+}
+
+.main {
+    padding: 20px;
 }

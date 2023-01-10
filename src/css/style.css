@@ -20,3 +20,6 @@
 
 /* home */
 @import url(/src/css/components/home.css);
+
+/* info */
+@import url(/src/css/components/info.css);
