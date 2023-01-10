@@ -1,0 +1,48 @@
+.artwork {
+    margin-top: 90px;
+}
+
+.artwork ::before{
+    content: "";
+    position: absolute;
+    top: 180px;
+    right: 0px;
+    width: 100px;
+    height: 200px;
+    background-color: var(--beige);
+    border-bottom: solid 1px var(--noir);
+    border-left: solid 1px var(--noir);
+    border-top: solid 1px var(--noir);
+    z-index: -1;
+}
+
+.work ::before{
+    content: "";
+    position: absolute;
+    top: 2710px;
+    left: -5px;
+    width: 300px;
+    height: 100px;
+    background-color: var(--beige);
+    border: solid 1px var(--noir);
+    z-index: -1;  
+}
+
+.work {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.work__date {
+    display: flex;
+    justify-content: center;
+    font-size: var(--date-oeuvres);
+    color: var(--beige);
+}
+
+.work__title {
+    display: flex;
+    justify-content: center;
+}

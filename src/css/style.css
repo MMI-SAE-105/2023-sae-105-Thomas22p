@@ -23,3 +23,6 @@
 
 /* info */
 @import url(/src/css/components/info.css);
+
+/* artwork */
+@import url(/src/css/components/artwork.css);
