@@ -26,3 +26,6 @@
 
 /* artwork */
 @import url(/src/css/components/artwork.css);
+
+/* contact */
+@import url(/src/css/components/contact.css);
