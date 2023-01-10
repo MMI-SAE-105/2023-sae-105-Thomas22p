@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primitivism</title>
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="title home__title">Primitiv<span>ism</span></h1>
+        <button class="button menu__button" aria-controls="mainNav" @click="menuIsOpen= ! menuIsOpen">
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="mainNav" x-show="menuIsOpen" class="header__menu menu">
+            <ul class="menu__list">
+                <li class="menu__item"><a class="menu__link" href="/fr/index.html">Accueil</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Artistes</a></li>
+                <li class="menu__item"><a class="menu__link" href="/fr/oeuvres.html">Oeuvres</a></li>
+                <li class="menu__item"><a class="menu__link" href="/fr/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="art__presentation">
+            <h1>La petite fleuriste</h1>
+            <img src="/public/img/petite_fleuriste.webp" alt="La petite fleuriste">
+            <p><span class="art__presentation--title">Date :</span>1953</p>
+            <p><span class="art__presentation--title">Mouvement artistique :</span>Primitivisme</p>
+            <p><span class="art__presentation--title">Domaine :</span>Peinture</p>
+            <p><span class="art__presentation--title">Dimensions :</span>35 x 27 cm (13.8 x 10.6 in.)</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <h1 class="title footer__title">Primitiv<span>ism</span></h1>
+        <a href="index.html">Accueil</a>
+        <a href="oeuvres.html">Oeuvres</a>
+        <a href="#">Billetterie</a>
+        <a href="contact.html">CONTACT</a>
+    </footer>
+</body>
+</html>
