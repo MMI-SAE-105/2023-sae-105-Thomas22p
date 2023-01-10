@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primitivism</title>
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="title home__title">Primitiv<span>ism</span></h1>
+        <button class="button menu__button" aria-controls="mainNav" @click="menuIsOpen= ! menuIsOpen">
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="mainNav" x-show="menuIsOpen" class="header__menu menu">
+            <ul class="menu__list">
+                <li class="menu__item"><a class="menu__link" href="/fr/index.html">Accueil</a></li>
+                <li class="menu__item"><a class="menu__link" href="/fr/index.html#artistes" @click="menuIsOpen= ! menuIsOpen">Artistes</a></li>
+                <li class="menu__item"><a class="menu__link" href="/fr/oeuvres.html">Oeuvres</a></li>
+                <li class="menu__item"><a class="menu__link" href="/fr/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        
+        <section class="artist__presentation">
+            <h1 class="title artist__title">Henri Rousseau</h1>
+            <img class="artist__img" src="/public/img/rousseau.webp" alt="Henri Rousseau">
+            <p class="artist__presentation--text"><span class="artiste__presentation--title">Henri Rousseau</span> est un peintre français qui est considéré comme un représentant majeur de l'art naïf. Il est connu pour son intérêt pour les cultures et les paysages exotiques. Il a été le premier artiste associé au mouvement du <span class="artiste__presentation--title">primitivisme</span>, qui célébrait l'art des cultures traditionnelles et non occidentales. Sa peinture était caractérisée par ses couleurs vives et ses motifs géométriques inspirés par l'art africain et l'art des peuples autochtones d'Amérique du Sud. Même sans formation artistique, Rousseau est devenu un peintre respecté et célèbre grâce à <span class="artiste__presentation--title">sa détermination et à son talent</span> pour capturer la vie et les paysages exotiques dans ses œuvres. Ses peintures ont été exposées dans de nombreux musées et galeries d'art à travers le monde et il reste un peintre populaire et apprécié de l'histoire de l'art.</p>
+            <h3 class="artist__title title__h3">FRISE CHRONOLOGIQUE</h3>
+            <section class="frise__item">
+                <a href="/fr/rousseau.html">
+                    <img src="/public/img/rousseau.webp" alt="Henri Rousseau">
+                    <h2 class="frise__title">Henri Rousseau</h2>
+                    <p class="frise__text">1844 - 1910</p>
+                </a>
+            </section>
+            <section class="frise__item">
+                <a href="/fr/lefranc.html">
+                    <img src="/public/img/Jules_lefranc.webp" alt="Jules Lefranc">
+                    <h2 class="frise__title">Jules Lefranc</h2>
+                    <p class="frise__text">1877 - 1972</p>
+                </a>
+            </section>
+            <section class="frise__item">
+                <a href="/fr/ludwig.html">
+                    <img src="/public/img/Bemelmans.webp" alt="Ludwig Bemelmans">
+                    <h2 class="frise__title">Ludwig Bemelmans</h2>
+                    <p class="frise__text">1889 - 1962</p>
+                </a>
+            </section>
+            <section class="frise__item">
+                <a href="/fr/sendak.html">
+                    <img src="/public/img/Mauric_sendak.webp" alt="Maurice Sendak">
+                    <h2 class="frise__title">Maurice Sendak</h2>
+                    <p class="frise__text">1928 - 2012</p>
+                </a>
+            </section>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <h1 class="title footer__title">Primitiv<span>ism</span></h1>
+        <a href="index.html">Accueil</a>
+        <a href="oeuvres.html">Oeuvres</a>
+        <a href="#">Billetterie</a>
+        <a href="contact.html">CONTACT</a>
+    </footer>
+</body>
+</html>
