@@ -31,3 +31,11 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+main {
+    margin: 0;
+}
+
+body {
+    margin: 0
+}
