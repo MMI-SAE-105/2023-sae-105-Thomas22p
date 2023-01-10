@@ -1,24 +1,24 @@
 :root {
-    /* Color styles */
---beige: rgba(207, 188, 158, 1);
---blue: rgba(38, 38, 51, 1);
---light-blue: rgba(60, 81, 133, 1);
---green: rgba(96, 134, 78, 1);
---yellow: rgba(186, 178, 100, 1);
---red: rgba(159, 82, 86, 1);
+    --beige: rgba(207, 188, 158, 1);
+    --blue: rgba(38, 38, 51, 1);
+    --light-blue: rgba(60, 81, 133, 1);
+    --green: rgba(96, 134, 78, 1);
+    --yellow: rgba(186, 178, 100, 1);
+    --red: rgba(159, 82, 86, 1);
+    --noir: rgba(0, 0, 0);
+    --blanc: rgba(255, 255, 255);
 
-/* Text-size styles */
---heading-2: 36px;
---paragraphe: 16px;
---heading-1: 40px;
---date-oeuvres: 16px;
---heading-3: 15px;
---contact: 14px;
---menu: 32px;
---p-carrousel: 13px;
---heading-carrousel: 32px;
+    /* Text-size styles */
+    --heading-2: 36px;
+    --paragraphe: 16px;
+    --heading-1: 40px;
+    --date-oeuvres: 16px;
+    --heading-3: 15px;
+    --contact: 14px;
+    --menu: 32px;
+    --p-carrousel: 13px;
+    --heading-carrousel: 32px;
 
---Playfair: 'Playfair Display', serif;
---Poppins: 'Poppins', sans-serif;
-
+    --playfair: 'Playfair Display', serif;
+    --poppins: 'Poppins', sans-serif;
 }
