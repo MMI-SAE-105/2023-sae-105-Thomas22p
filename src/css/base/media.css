@@ -3,3 +3,8 @@ img {
     width: 100vw;
     height: auto;
 }
+
+.home__img {
+    max-height: 30%;
+    max-width: auto;
+}
