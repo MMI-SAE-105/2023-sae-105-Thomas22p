@@ -27,6 +27,8 @@
     width: 20px;
     height: 20px;
     z-index: 3;
+    border: none;
+    background-color: transparent;
 }
 
 .title {
