@@ -37,33 +37,40 @@
             <p class="home__text">du 13 avril au 23 juin 2021</p>
         </section>
         <img src="/public/icn/chevron_bas.svg" alt="lire plus bas">
-        <section class="">
-            <h2>Le Primitivisme</h2>
-            <p>Le primitivisme est un mouvement artistique du début du 20e siècle qui s'intéressait aux formes d'art primitives des peuples indigènes et des cultures traditionnelles. Les artistes de primitivisme étaient inspirés par ces formes d'art et les considéraient comme étant plus authentiques et libres de toute influence culturelle occidentale.</p>
-            <p>Le primitivisme a eu un impact sur de nombreux mouvements artistiques du 20e siècle et a été représenté par des artistes tels que Pablo Picasso, Georges Braque et André Derain.</p>
-            <h3>INFORMATION</h3>
-            <ul>Dates et horaires 
-                <li>Du 13 avril au 23 juin 2021.</li>
-                <li>Tous les jours, sauf le lundi, de 11h à 20h.</li>
-                <li>Nocturnele mardi, jusqu'à 22h.</li>
-                <li>La fermeture des salles débute à 19h45 (21h45 les mardis).</li>
+        <section class="definition">
+            <h2 class="definition__title">Le Primitivisme</h2>
+            <p class="definition__text">Le primitivisme est un mouvement artistique du début du 20e siècle qui s'intéressait aux formes d'art primitives des peuples indigènes et des cultures traditionnelles. Les artistes de primitivisme étaient inspirés par ces formes d'art et les considéraient comme étant plus authentiques et libres de toute influence culturelle occidentale.</p>
+            <p class="definition__text">Le primitivisme a eu un impact sur de nombreux mouvements artistiques du 20e siècle et a été représenté par des artistes tels que Pablo Picasso, Georges Braque et André Derain.</p>
+        </section>
+        <section class="info">
+            <h3 class="info__title">INFORMATION</h3>
+            <p class="info__subtitle"></p>
+            <ul class="info__list--date">
+                <li class="info__item">Du 13 avril au 23 juin 2021.</li>
+                <li class="info__item">Tous les jours, sauf le lundi, de 11h à 20h.</li>
+                <li class="info__item">Nocturnele mardi, jusqu'à 22h.</li>
+                <li class="info__item">La fermeture des salles débute à 19h45 (21h45 les mardis).</li>
             </ul>
-            <p>Lieux :</p>
-            <p>Fondation Cartier, 261 Bd Raspail, 75014 Paris</p>
-            <ul>Tarifs :
-                <li>Plein tarif 11€</li>
-                <li>Tarif réduit  7,50€</li>
-                <li>Réduction 13-25 ans 5€</li>
-                <li>Fondation Cartier Pass 18€ - 50€</li>
+            <p class="info__subtitle">Lieux :</p>
+            <p  class="info__text">Fondation Cartier, 261 Bd Raspail, 75014 Paris</p>
+            <p class="info__subtitle">Tarifs :</p>
+            <ul class="info__tarif" x-data="{ data: {} }" x-init="fetch('../src/JSON/data.json').then(response => response.json()).then(json => data = json)">
+                <template x-for="obj of data">
+                    <li>
+                        <span x-text="obj.nom">nom</span> : 
+                        <span x-text="obj.prix">tarif</span>
+                    </li>
+                </template>
             </ul>
-            <ul>Les tarifs gratuits :
-                <li>Les moins de 13 ans</li>
-                <li>Laissez-passer annuel</li>
-                <li>Carte Icom</li>
-                <li>Carte de presse</li>
-                <li>Carte d'invalidité</li>
-                <li>Fondation Cartier Pass</li>
-                <li>Etudiants</li>
+            <p class="info__subtitle">Les tarifs gratuits :</p>
+            <ul class="info__free">
+                <li class="free__item">Les moins de 13 ans</li>
+                <li class="free__item">Laissez-passer annuel</li>
+                <li class="free__item">Carte Icom</li>
+                <li class="free__item">Carte de presse</li>
+                <li class="free__item">Carte d'invalidité</li>
+                <li class="free__item">Fondation Cartier Pass</li>
+                <li class="free__item">Etudiants</li>
             </ul>
         </section>
         <section class="artist">

@@ -1,0 +1,18 @@
+[
+    {
+        "nom": "Plein tarif" ,
+        "prix": "11€" 
+    },
+    {
+        "nom":"Tarif réduit",
+        "prix": "7.5€"
+    },
+    {
+        "nom":"13-25ans",
+        "prix": "5€"
+    },
+    {
+        "nom":"Fondation Carier Pass",
+        "prix": "18-50€"
+    }
+]
