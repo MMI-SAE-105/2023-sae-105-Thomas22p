@@ -5,3 +5,12 @@
 
 /* main */
 @import url(/src/css/base/main.css);
+
+/* header */
+@import url(/src/css/layout/header.css);
+
+/* footer */
+@import url(/src/css/layout/footer.css);
+
+/* menu */
+@import url(/src/css/components/menu.css);
