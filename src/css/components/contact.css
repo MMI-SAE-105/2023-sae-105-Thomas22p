@@ -16,7 +16,7 @@
 .contact__title {
     position: absolute;
     color: var(--blanc);
-    top: 125px;
+    top: 130px;
     left: 7%;
     z-index: 1;
 }
