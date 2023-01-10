@@ -19,7 +19,29 @@
     margin: 0;
 }
 
+.menu__button {
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 3;
+}
+
+.title {
+    font-family: var(--playfair);
+    font-weight: 600;
+    position: absolute;
+}
+
 .span__title {
+    color: var(--noir);
+    font-family: var(--playfair);
+    font-weight: 400;
+    font-style: italic;
+}
+
+.span__title--header {
     color: var(--noir);
     font-family: var(--playfair);
     font-size: var(--menu);

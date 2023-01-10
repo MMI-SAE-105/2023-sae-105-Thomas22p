@@ -11,14 +11,17 @@
     <link rel="stylesheet" href="/src/css/style.css">
 </head>
 <body>
-    <header class="header">
-        <h1 class="title header__title">Primitiv<span class="span__title">ism</span></h1>
-        <button class="button menu__button" aria-controls="mainNav" @click="menuIsOpen= ! menuIsOpen">
-            <span></span>
-            <span></span>
-        </button>
+    <header>
+        <div class="header">
+            <h1 class="title header__title">Primitiv<span class="span__title span__title">ism</span></h1>
+            <button class="button menu__button" @click="menuIsOpen= ! menuIsOpen">
+                
+                
+            </button>
+        </div>
 
-        <nav id="mainNav" x-show="menuIsOpen" class="header__menu menu">
+        <nav x-show="menuIsOpen" class="header__menu">
+            <button class="button menu__button" @click="menuIsOpen= ! menuIsOpen"></button>
             <ul class="menu__list">
                 <li class="menu__item"><a class="menu__link" href="/fr/index.html">Accueil</a></li>
                 <li class="menu__item"><a class="menu__link" href="/fr/index.html#artistes" @click="menuIsOpen= ! menuIsOpen">Artistes</a></li>
@@ -30,7 +33,7 @@
 
     <main class="main">
         <section class="home">
-            <h1 class="title home__title">Primitiv<span>ism</span></h1>
+            <h1 class="title home__title">Primitiv<span class="span__title span__title--home">ism</span></h1>
             <img class="home__img" src="../public/img/The_Mill.webp" alt="The Mill, oeuvre de Henri Rousseau">
             <a href="oeuvres.html"><p class="home__button button__oeuvres">OEUVRES</p></a>
             <a href="#"><p class="home__button button__billetterie">BILLETTERIE</p></a>
@@ -83,7 +86,7 @@
     </main>
 
     <footer class="footer">
-        <h1 class="title footer__title">Primitiv<span>ism</span></h1>
+        <h1 class="title footer__title">Primitiv<span class="span__title span__title--footer">ism</span></h1>
         <a href="index.html">Accueil</a>
         <a href="oeuvres.html">Oeuvres</a>
         <a href="#">Billetterie</a>

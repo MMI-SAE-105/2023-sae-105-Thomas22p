@@ -6,6 +6,9 @@
 /* main */
 @import url(/src/css/base/main.css);
 
+/* média */
+@import url(/src/css/base/media.css);
+
 /* header */
 @import url(/src/css/layout/header.css);
 
