@@ -1,0 +1,33 @@
+p {
+    font-family: 'poppins';
+    font-size: var(--s);
+    line-height: 145%;
+}
+
+h1 {
+    font-family: var(--playfair);
+    font-size: var(--heading-1);
+    font-weight: 800;
+}
+
+h2 {
+    font-family: var(--poppins);
+    font-size: var(--heading-2);
+    font-weight: 700;
+}
+
+h3 {
+    font-family: var(--poppins);
+    font-size: var(--heading-3);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+a {
+    color: var(--noir);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
