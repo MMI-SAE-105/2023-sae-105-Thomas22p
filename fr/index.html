@@ -21,7 +21,7 @@
         <nav id="mainNav" x-show="menuIsOpen" class="header__menu menu">
             <ul class="menu__list">
                 <li class="menu__item"><a class="menu__link" href="/fr/index.html">Accueil</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">Artistes</a></li>
+                <li class="menu__item"><a class="menu__link" href="/fr/index.html#artistes" @click="menuIsOpen= ! menuIsOpen">Artistes</a></li>
                 <li class="menu__item"><a class="menu__link" href="/fr/oeuvres.html">Oeuvres</a></li>
                 <li class="menu__item"><a class="menu__link" href="/fr/contact.html">Contact</a></li>
             </ul>
@@ -73,7 +73,7 @@
                 <li class="free__item">Etudiants</li>
             </ul>
         </section>
-        <section class="artist">
+        <section id="artistes" class="artist">
             <!-- carroussel -->
         </section>
     </main>
