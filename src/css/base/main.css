@@ -39,3 +39,8 @@ body {
 .main {
     padding: 20px;
 }
+
+.noScroll,
+.noScroll body {
+    overflow: hidden;
+}
