@@ -41,3 +41,6 @@
 
 /* art presentation */
 @import url(/src/css/components/art_presentation.css);
+
+/* carrousel */
+@import url(/src/css/components/carrousel.css);
