@@ -29,3 +29,12 @@
 
 /* contact */
 @import url(/src/css/components/contact.css);
+
+/* artist_presentation */
+@import url(/src/css/components/artist_presentation.css);
+
+/* frise */
+@import url(/src/css/components/frise.css);
+
+/* more */
+@import url(/src/css/components/more.css);
