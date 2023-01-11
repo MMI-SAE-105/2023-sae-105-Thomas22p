@@ -8,7 +8,48 @@
     <link rel="stylesheet" href="/src/css/style.css">
 </head>
 <body>
-    <a href="/fr/index.html" onclick="document.cookie = 'nf_lang=fr; patch=/'">Voir le contenu en Français</a>
-    <a href="#" onclick="document.cookie = 'nf_lang=en; patch=/'">See the content in English</a>
+    <div class="redirect">
+        <h1>Bienvenue dans l'exposition Primitivism</h1>
+        <a class="fr" href="/fr/index.html" onclick="document.cookie = 'nf_lang=fr; patch=/'">Voir le contenu en Français</a>
+        <a class="en" href="#" onclick="document.cookie = 'nf_lang=en; patch=/'">See the content in English</a>
+    </div>
 </body>
 </html>
+
+<style>
+.redirect {
+    display: flex;
+    padding-bottom: 2000px;
+    height: 100%;
+    background-color: var(--beige);
+    flex-direction: column;
+    justify-content: center;
+}
+
+.redirect h1 {
+    text-align: center;
+}
+
+.fr {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    font-size: 1.5em;
+    font-family: var(--playfair);
+    padding: 10px 20px;
+    color: var(--blanc);
+    border: 1px solid var(--blanc);
+}
+
+.en {
+    position: absolute;
+    top: 55%;
+    left: 5%;
+    font-size: 1.5em;
+    font-family: var(--playfair);
+    padding: 10px 20px;
+    color: var(--blanc);
+    border: 1px solid var(--blanc);
+}
+
+</style>
