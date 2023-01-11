@@ -1,0 +1,12 @@
+.art__presentation {
+    margin-top: 90px;
+}
+
+.art__presentation h1 {
+    text-align: center;
+}
+
+.art__presentation--title {
+    font-weight: 700;
+    padding-right: 10px;
+}
