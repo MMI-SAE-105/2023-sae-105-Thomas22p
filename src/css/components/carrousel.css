@@ -1,27 +1,78 @@
-.carrousel__parent--ecrans {
+* {
+    box-sizing: border-box;
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+
+
+}
+
+.carrousel_parent-ecrans {
     display: flex;
     width: 100%;
-    margin: 0;
-    height: auto;
     overflow-x: scroll;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
 }
 
-.carrousel {
+.carrousel_ecran {
     width: 100%;
-    animation: slider 20s infinite;
-}
-
-
-.carrousel__ecran {
-    margin: 0;
+    flex: none;
     scroll-snap-align: start;
 }
 
-.carrousel__img {
-    width: 80vw;
-    max-width: 672px;
+.carrousel_ecran figure {
+    margin: 0 20px 0 20px;
+}
+
+.caroussel_liste-liens {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    border-radius: 16px;
+    gap: 1rem;
+    list-style: none;
+}
+
+.caroussel_liste-liens :hover {
+    background-color: rgb(109, 106, 106);
+    border-radius: 2px;
+}
+
+.caroussel_lien {
+    text-decoration: none;
+    color: black;
+}
+
+.carrousel {
+    position: relative;
+}
+
+.carrousel_btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    border: none;
+    display: grid;
+    place-content: center;
+    color: #fff;
+}
+
+.carrousel_btn-avant {
+    left: 20px;
+    top: 2500px;
+}
+
+.carrousel_btn-apres {
+    right: 20px;
+    top: 2500px;
 }
 
 

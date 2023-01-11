@@ -79,44 +79,49 @@
         </section>
         <section id="artistes" class="artist">
             <h2>Les artistes</h2>
-
-            <a href="/fr/rousseau.html">rousseau</a>
-            <a href="/fr/lefranc.html">lefranc</a>
-            <a href="/fr/ludwig.html">Bemelmans</a>
-            <a href="/fr/sendak.html">sendak</a>
         </section>
-        <carrousel x-data="{hrefCourant: '#ecran-1'}" class="caroussel">
-            <button @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth" class="carrousel__btn carrousel__btn--avant" aria-label="slide précedant">&lt;</button>
-            <button @click="$refs.parent.scrollLeft += $refs.parent.clientWidth" class=" carrousel__btn carrousel__btn--apres" aria-label="slide suivant">></button>
-                    <div class="carrousel__parent--ecrans" x-ref="parent"
-                        @scroll.debounce.250ms.passive="
-        hrefCourant = '#'+
-                      [...$refs.parent.children]
-                       .find(e=>e.getBoundingClientRect().x>=0)
-                       .id
-                                         ">
-                        <div id="ecran-1" class="carrousel_ecran">
+        <carrousel x-data="{hrefCourant: '#ecran-1'}">
+        <button @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth" class="carrousel_btn carrousel_btn-avant"
+            aria-label="slide précedant">
+            <</button><button @click="$refs.parent.scrollLeft += $refs.parent.clientWidth" class=" carrousel_btn carrousel_btn-apres" aria-label="slide suivant">></button>
+                <div class="carrousel_parent-ecrans" x-ref="parent"
+                    @scroll.debounce.250ms.passive="
+hrefCourant = '#'+
+                  [...$refs.parent.children]
+                   .find(e=>e.getBoundingClientRect().x>=0)
+                   .id
+                                     ">
+                    <div id="ecran-1" class="carrousel_ecran">
+                        <a href="/fr/rousseau.html">
                             <figure>
                                 <img class="carrousel__img" src="/public/img/slide_rousseau.webp" alt="image ecran 1">
                             </figure>
-                        </div>
-                        <div id="ecran-2" class="carrousel_ecran">
+                        </a>
+                    </div>
+                    <div id="ecran-2" class="carrousel_ecran">
+                        <a href="/fr/lefranc.html">
                             <figure>
                                 <img class="carrousel__img" src="/public/img/slide_lefranc.webp" alt="image ecran 2">
                             </figure>
-                        </div>
-                        <div id="ecran-3" class="carrousel_ecran">
+                        </a>
+                    </div>
+                    <div id="ecran-3" class="carrousel_ecran">
+                        <a href="/fr/ludwig.html">
                             <figure>
                                 <img class="carrousel__img" src="/public/img/slide_ludwig.webp" alt="image ecran 3">
                             </figure>
-                        </div>
-                        <div id="ecran-4" class="carrousel_ecran">
+                        </a>
+                    </div>
+                    <div id="ecran-4" class="carrousel_ecran">
+                        <a href="/fr/sendak.html">
                             <figure>
                                 <img class="carrousel__img" src="/public/img/slide_sendak.webp" alt="image ecran 4">
                             </figure>
-                        </div>
+                        </a>
                     </div>
-        </carrousel>
+                    
+                </div>
+    </carrousel>
     </main>
 
     <footer class="footer">
