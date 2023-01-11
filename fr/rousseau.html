@@ -11,14 +11,18 @@
     <link rel="stylesheet" href="/src/css/style.css">
 </head>
 <body>
-    <header class="header">
-        <h1 class="title home__title">Primitiv<span>ism</span></h1>
-        <button class="button menu__button" aria-controls="mainNav" @click="menuIsOpen= ! menuIsOpen">
-            <span></span>
-            <span></span>
-        </button>
+    <header>
+        <div class="header">
+            <a href="/fr/index.html"><h1 class="title header__title">Primitiv<span class="span__title span__title">ism</span></h1></a>
+            <button class="button menu__button" @click="menuIsOpen= ! menuIsOpen">
+                <img class="menu__icn" src="/public/icn/logo_menu.svg" alt="ouvrir le menu">
+            </button>
+        </div>
 
-        <nav id="mainNav" x-show="menuIsOpen" class="header__menu menu">
+        <nav x-show="menuIsOpen" class="header__menu">
+            <button class="button menu__button" @click="menuIsOpen= ! menuIsOpen">
+            <img class="menu__icn" src="/public/icn/croix_menu.svg" alt="fermer le menu">
+        </button>
             <ul class="menu__list">
                 <li class="menu__item"><a class="menu__link" href="/fr/index.html">Accueil</a></li>
                 <li class="menu__item"><a class="menu__link" href="/fr/index.html#artistes" @click="menuIsOpen= ! menuIsOpen">Artistes</a></li>
@@ -29,41 +33,50 @@
     </header>
 
     <main class="main">
-        
         <section class="artist__presentation">
-            <h1 class="title artist__title">Henri Rousseau</h1>
+            <h1 class="artist__title">Henri Rousseau</h1>
             <img class="artist__img" src="/public/img/rousseau.webp" alt="Henri Rousseau">
-            <p class="artist__presentation--text"><span class="artiste__presentation--title">Henri Rousseau</span> est un peintre français qui est considéré comme un représentant majeur de l'art naïf. Il est connu pour son intérêt pour les cultures et les paysages exotiques. Il a été le premier artiste associé au mouvement du <span class="artiste__presentation--title">primitivisme</span>, qui célébrait l'art des cultures traditionnelles et non occidentales. Sa peinture était caractérisée par ses couleurs vives et ses motifs géométriques inspirés par l'art africain et l'art des peuples autochtones d'Amérique du Sud. Même sans formation artistique, Rousseau est devenu un peintre respecté et célèbre grâce à <span class="artiste__presentation--title">sa détermination et à son talent</span> pour capturer la vie et les paysages exotiques dans ses œuvres. Ses peintures ont été exposées dans de nombreux musées et galeries d'art à travers le monde et il reste un peintre populaire et apprécié de l'histoire de l'art.</p>
+            <p class="artist__presentation--text"><span class="artiste__presentation--title">Henri Rousseau</span> est un peintre français qui est considéré comme un représentant majeur de l'art naïf. Il est connu pour son intérêt pour les cultures et les paysages exotiques. Il a été le premier artiste associé au mouvement du <span class="artiste__presentation--title">primitivisme</span>, qui célébrait l'art des cultures traditionnelles et non occidentales.</p>
+            <p class="artist__presentation--text">Sa peinture était caractérisée par ses couleurs vives et ses motifs géométriques inspirés par l'art africain et l'art des peuples autochtones d'Amérique du Sud. Même sans formation artistique, Rousseau est devenu un peintre respecté et célèbre grâce à <span class="artiste__presentation--title">sa détermination et à son talent</span> pour capturer la vie et les paysages exotiques dans ses œuvres.</p>
+            <p class="artist__presentation--text">Ses peintures ont été exposées dans de nombreux musées et galeries d'art à travers le monde et il reste un peintre populaire et apprécié de l'histoire de l'art.</p>
             <section class="frise">
-                <h3 class="artist__title title__h3">FRISE CHRONOLOGIQUE</h3>
-                <div class="frise__item">
-                    <a href="/fr/rousseau.html">
-                        <img src="/public/img/rousseau.webp" alt="Henri Rousseau">
-                        <h2 class="frise__title">Henri Rousseau</h2>
-                        <p class="frise__text">1844 - 1910</p>
-                    </a>
-                </div>
-                <div class="frise__item">
-                    <a href="/fr/lefranc.html">
-                        <img src="/public/img/Jules_lefranc.webp" alt="Jules Lefranc">
-                        <h2 class="frise__title">Jules Lefranc</h2>
-                        <p class="frise__text">1877 - 1972</p>
-                    </a>
-                </div>
-                <div class="frise__item">
-                    <a href="/fr/ludwig.html">
-                        <img src="/public/img/Bemelmans.webp" alt="Ludwig Bemelmans">
-                        <h2 class="frise__title">Ludwig Bemelmans</h2>
-                        <p class="frise__text">1889 - 1962</p>
-                    </a>
-                </div>
-                <div class="frise__item">
-                    <a href="/fr/sendak.html">
-                        <img src="/public/img/Mauric_sendak.webp" alt="Maurice Sendak">
-                        <h2 class="frise__title">Maurice Sendak</h2>
-                        <p class="frise__text">1928 - 2012</p>
-                    </a>
-                </div>
+                <h3 class="frise__title title__h3">FRISE CHRONOLOGIQUE</h3>
+                <a href="/fr/rousseau.html">
+                    <div class="frise__item">
+                        <img class="frise__img" src="/public/img/rousseau.webp" alt="Henri Rousseau">
+                        <div class="frise__info">
+                            <h2 class="frise__title--info">Henri Rousseau</h2>
+                            <p class="frise__text">1844 - 1910</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/fr/rousseau.html">
+                    <div class="frise__item">
+                        <img class="frise__img" src="/public/img/Jules_lefranc.webp" alt="Jules Lefranc">
+                        <div class="frise__info">
+                            <h2 class="frise__title--info">Jules Lefranc</h2>
+                            <p class="frise__text">1877 - 1972</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/fr/ludwig.html">
+                    <div class="frise__item">
+                        <img class="frise__img" src="/public/img/Bemelmans.webp" alt="Ludwig Bemelmans">
+                        <div class="frise__info">
+                            <h2 class="frise__title--info">Ludwig Bemelmans</h2>
+                            <p class="frise__text">1889 - 1962</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/fr/sendak.html">
+                    <div class="frise__item">
+                        <img class="frise__img" src="/public/img/Mauric_sendak.webp" alt="Maurice Sendak">
+                        <div class="frise__info">
+                            <h2 class="frise__title--info">Maurice Sendak</h2>
+                            <p class="frise__text">1928 - 2012</p>
+                        </div>
+                    </div>
+                </a>
             </section>
             <section class="more">
                 <h3 class="more__title title__h3">CERTAINES DE SES OEUVRES</h3>
@@ -93,11 +106,13 @@
     </main>
 
     <footer class="footer">
-        <h1 class="title footer__title">Primitiv<span>ism</span></h1>
-        <a href="index.html">Accueil</a>
-        <a href="oeuvres.html">Oeuvres</a>
-        <a href="#">Billetterie</a>
-        <a href="contact.html">CONTACT</a>
+        <h1 class="title footer__title">Primitiv<span class="span__title span__title--footer">ism</span></h1>
+        <ul class="footer__list">
+            <li><a class="footer__link" href="index.html">Accueil</a></li>
+            <li><a class="footer__link" href="oeuvres.html">Oeuvres</a></li>
+            <li><a class="footer__link" href="#">Billetterie</a></li>
+        </ul>
+        <a href="contact.html"><p class="home__button button__contact">CONTACT</p></a>
     </footer>
 </body>
 </html>
