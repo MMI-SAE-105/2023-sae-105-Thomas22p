@@ -2,8 +2,19 @@
     margin-top: 90px;
 }
 
-.artist_title {
+.artist__presentation h1 {
     text-align: center;
+}
+
+.artist_title + h1{
+    align-items: center;
+}
+
+.artist__img {
+    margin: 0 10% 30px 10%;
+    width: 80%;
+    height: auto;
+    border-radius: 50%;
 }
 
 .artiste__presentation--title {

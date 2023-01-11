@@ -5,6 +5,7 @@
     margin: 40px 0;
 }
 
+
 .frise__item {
     display: flex;
     flex-direction: row;
@@ -34,4 +35,11 @@
 .frise__title {
     position: relative;
     right: 45px;
+}
+
+.frise__img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-left: 20px;
 }
