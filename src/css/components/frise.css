@@ -1,0 +1,37 @@
+.frise { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.frise__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.frise__info {
+    display: inline;
+    flex-direction: column;
+    text-align: center;
+    width: 200px;
+    padding: 0;
+    margin: 0;
+    gap: 5px;
+}
+
+.frise__title--info {
+    font-family: var(--);
+    font-size: var(--subtitle);
+}
+
+.frise__title {
+    position: relative;
+    right: 45px;
+}
