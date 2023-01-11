@@ -23,7 +23,7 @@
 
 .form__1 {
     display: flex;
-    margin: 0 auto;
+    padding: 0 0 0 25px;
     margin-bottom: 10px;
     margin-left: 10px;
 }
@@ -70,5 +70,19 @@
     font-family: var(--poppins);
     font-size: var(--p);
     color: var(--blanc);
+}
+
+.form__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 81.5vw;
+    height: 4vh;
+    border: var(--blanc) 2px solid;
+    background-color: var(--blanc);
+    color: var(--noir);
+    font-family: var(--poppins);
+    font-size: var(--p);
+    margin-top: 10px;
 }
 

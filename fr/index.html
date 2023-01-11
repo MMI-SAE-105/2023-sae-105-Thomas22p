@@ -19,7 +19,7 @@
             </button>
         </div>
 
-        <nav x-show="menuIsOpen" class="header__menu">
+        <nav x-show="menuIsOpen" class="header__menu" x-transition.duration.600ms>
             <button class="button menu__button" @click="menuIsOpen= ! menuIsOpen">
             <img class="menu__icn" src="/public/icn/croix_menu.svg" alt="fermer le menu">
         </button>
@@ -27,12 +27,13 @@
                 <li class="menu__item"><a class="menu__link" href="/fr/index.html">Accueil</a></li>
                 <li class="menu__item"><a class="menu__link" href="/fr/index.html#artistes" @click="menuIsOpen= ! menuIsOpen">Artistes</a></li>
                 <li class="menu__item"><a class="menu__link" href="/fr/oeuvres.html">Oeuvres</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Billetterie</a></li>
                 <li class="menu__item"><a class="menu__link" href="/fr/contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="main">
+    <main>
         <section class="home">
             <h1 class="title home__title">Primitiv<span class="span__title span__title--home">ism</span></h1>
             <img class="home__img" src="../public/img/The_Mill.webp" alt="The Mill, oeuvre de Henri Rousseau">
@@ -40,88 +41,90 @@
             <a href="#"><p class="home__button button__billetterie">BILLETTERIE</p></a>
             <p class="home__text">du 13 avril au 23 juin 2021</p>
         </section>
-        <img class="img__chevron" src="/public/icn/chevron_bas.svg" alt="lire plus bas">
-        <section class="definition">
-            <h2 class="definition__title">Le Primitivisme</h2>
-            <p class="definition__text">Le primitivisme est un mouvement artistique du début du 20e siècle qui s'intéressait aux formes d'art primitives des peuples indigènes et des cultures traditionnelles. Les artistes de primitivisme étaient inspirés par ces formes d'art et les considéraient comme étant plus authentiques et libres de toute influence culturelle occidentale.</p>
-            <p class="definition__text">Le primitivisme a eu un impact sur de nombreux mouvements artistiques du 20e siècle et a été représenté par des artistes tels que Pablo Picasso, Georges Braque et André Derain.</p>
+        <section class="main">
+            <img class="img__chevron" src="/public/icn/chevron_bas.svg" alt="lire plus bas">
+            <section class="definition">
+                <h2 class="definition__title">Le Primitivisme</h2>
+                <p class="definition__text">Le primitivisme est un mouvement artistique du début du 20e siècle qui s'intéressait aux formes d'art primitives des peuples indigènes et des cultures traditionnelles. Les artistes de primitivisme étaient inspirés par ces formes d'art et les considéraient comme étant plus authentiques et libres de toute influence culturelle occidentale.</p>
+                <p class="definition__text">Le primitivisme a eu un impact sur de nombreux mouvements artistiques du 20e siècle et a été représenté par des artistes tels que Pablo Picasso, Georges Braque et André Derain.</p>
+            </section>
+            <section class="info">
+                <h3 class="info__title title__h3">INFORMATION</h3>
+                <p class="info__subtitle">Dates et horaires :</p>
+                <ul class="info__list--date">
+                    <li class="info__item">Du 13 avril au 23 juin 2021.</li>
+                    <li class="info__item">Tous les jours, sauf le lundi, de 11h à 20h.</li>
+                    <li class="info__item">Nocturnele mardi, jusqu'à 22h.</li>
+                    <li class="info__item">La fermeture des salles débute à 19h45 (21h45 les mardis).</li>
+                </ul>
+                <p class="info__subtitle">Lieux :</p>
+                <p  class="info__text">Fondation Cartier, 261 Bd Raspail, 75014 Paris</p>
+                <p class="info__subtitle">Tarifs :</p>
+                <ul class="info__tarif" x-data="{ data: {} }" x-init="fetch('../src/JSON/data.json').then(response => response.json()).then(json => data = json)">
+                    <template x-for="obj of data">
+                        <li>
+                            <span x-text="obj.nom">nom</span> :
+                            <span x-text="obj.prix">tarif</span>
+                        </li>
+                    </template>
+                </ul>
+                <p class="info__subtitle">Les tarifs gratuits :</p>
+                <ul class="info__free">
+                    <li class="free__item">Les moins de 13 ans</li>
+                    <li class="free__item">Laissez-passer annuel</li>
+                    <li class="free__item">Carte Icom</li>
+                    <li class="free__item">Carte de presse</li>
+                    <li class="free__item">Carte d'invalidité</li>
+                    <li class="free__item">Fondation Cartier Pass</li>
+                    <li class="free__item">Etudiants</li>
+                </ul>
+            </section>
+            <section id="artistes" class="artist">
+                <h2>Les artistes</h2>
+            </section>
+            <carrousel x-data="{hrefCourant: '#ecran-1'}">
+            <button @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth" class="carrousel_btn carrousel_btn-avant"
+                aria-label="slide précedant">
+                <</button><button @click="$refs.parent.scrollLeft += $refs.parent.clientWidth" class=" carrousel_btn carrousel_btn-apres" aria-label="slide suivant">></button>
+                    <div class="carrousel_parent-ecrans" x-ref="parent"
+                        @scroll.debounce.250ms.passive="
+            hrefCourant = '#'+
+                      [...$refs.parent.children]
+                       .find(e=>e.getBoundingClientRect().x>=0)
+                       .id
+                                         ">
+                        <div id="ecran-1" class="carrousel_ecran">
+                            <a href="/fr/rousseau.html">
+                                <figure>
+                                    <img class="carrousel__img" src="/public/img/slide_rousseau.webp" alt="image ecran 1">
+                                </figure>
+                            </a>
+                        </div>
+                        <div id="ecran-2" class="carrousel_ecran">
+                            <a href="/fr/lefranc.html">
+                                <figure>
+                                    <img class="carrousel__img" src="/public/img/slide_lefranc.webp" alt="image ecran 2">
+                                </figure>
+                            </a>
+                        </div>
+                        <div id="ecran-3" class="carrousel_ecran">
+                            <a href="/fr/ludwig.html">
+                                <figure>
+                                    <img class="carrousel__img" src="/public/img/slide_ludwig.webp" alt="image ecran 3">
+                                </figure>
+                            </a>
+                        </div>
+                        <div id="ecran-4" class="carrousel_ecran">
+                            <a href="/fr/sendak.html">
+                                <figure>
+                                    <img class="carrousel__img" src="/public/img/slide_sendak.webp" alt="image ecran 4">
+                                </figure>
+                            </a>
+                        </div>
+            
+                    </div>
+                </carrousel>
         </section>
-        <section class="info">
-            <h3 class="info__title title__h3">INFORMATION</h3>
-            <p class="info__subtitle">Dates et horaires :</p>
-            <ul class="info__list--date">
-                <li class="info__item">Du 13 avril au 23 juin 2021.</li>
-                <li class="info__item">Tous les jours, sauf le lundi, de 11h à 20h.</li>
-                <li class="info__item">Nocturnele mardi, jusqu'à 22h.</li>
-                <li class="info__item">La fermeture des salles débute à 19h45 (21h45 les mardis).</li>
-            </ul>
-            <p class="info__subtitle">Lieux :</p>
-            <p  class="info__text">Fondation Cartier, 261 Bd Raspail, 75014 Paris</p>
-            <p class="info__subtitle">Tarifs :</p>
-            <ul class="info__tarif" x-data="{ data: {} }" x-init="fetch('../src/JSON/data.json').then(response => response.json()).then(json => data = json)">
-                <template x-for="obj of data">
-                    <li>
-                        <span x-text="obj.nom">nom</span> : 
-                        <span x-text="obj.prix">tarif</span>
-                    </li>
-                </template>
-            </ul>
-            <p class="info__subtitle">Les tarifs gratuits :</p>
-            <ul class="info__free">
-                <li class="free__item">Les moins de 13 ans</li>
-                <li class="free__item">Laissez-passer annuel</li>
-                <li class="free__item">Carte Icom</li>
-                <li class="free__item">Carte de presse</li>
-                <li class="free__item">Carte d'invalidité</li>
-                <li class="free__item">Fondation Cartier Pass</li>
-                <li class="free__item">Etudiants</li>
-            </ul>
-        </section>
-        <section id="artistes" class="artist">
-            <h2>Les artistes</h2>
-        </section>
-        <carrousel x-data="{hrefCourant: '#ecran-1'}">
-        <button @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth" class="carrousel_btn carrousel_btn-avant"
-            aria-label="slide précedant">
-            <</button><button @click="$refs.parent.scrollLeft += $refs.parent.clientWidth" class=" carrousel_btn carrousel_btn-apres" aria-label="slide suivant">></button>
-                <div class="carrousel_parent-ecrans" x-ref="parent"
-                    @scroll.debounce.250ms.passive="
-hrefCourant = '#'+
-                  [...$refs.parent.children]
-                   .find(e=>e.getBoundingClientRect().x>=0)
-                   .id
-                                     ">
-                    <div id="ecran-1" class="carrousel_ecran">
-                        <a href="/fr/rousseau.html">
-                            <figure>
-                                <img class="carrousel__img" src="/public/img/slide_rousseau.webp" alt="image ecran 1">
-                            </figure>
-                        </a>
-                    </div>
-                    <div id="ecran-2" class="carrousel_ecran">
-                        <a href="/fr/lefranc.html">
-                            <figure>
-                                <img class="carrousel__img" src="/public/img/slide_lefranc.webp" alt="image ecran 2">
-                            </figure>
-                        </a>
-                    </div>
-                    <div id="ecran-3" class="carrousel_ecran">
-                        <a href="/fr/ludwig.html">
-                            <figure>
-                                <img class="carrousel__img" src="/public/img/slide_ludwig.webp" alt="image ecran 3">
-                            </figure>
-                        </a>
-                    </div>
-                    <div id="ecran-4" class="carrousel_ecran">
-                        <a href="/fr/sendak.html">
-                            <figure>
-                                <img class="carrousel__img" src="/public/img/slide_sendak.webp" alt="image ecran 4">
-                            </figure>
-                        </a>
-                    </div>
-                    
-                </div>
-    </carrousel>
     </main>
 
     <footer class="footer">

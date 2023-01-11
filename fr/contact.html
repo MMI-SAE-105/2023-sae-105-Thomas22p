@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+<html lang="en" x-data="{menuIsOpen: false}" :class="menuIsOpen && 'noScroll'">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,7 +19,7 @@
             </button>
         </div>
 
-        <nav x-show="menuIsOpen" class="header__menu">
+        <nav x-show="menuIsOpen" class="header__menu" x-transition.duration.600ms>
             <button class="button menu__button" @click="menuIsOpen= ! menuIsOpen">
             <img class="menu__icn" src="/public/icn/croix_menu.svg" alt="fermer le menu">
         </button>
@@ -27,12 +27,13 @@
                 <li class="menu__item"><a class="menu__link" href="/fr/index.html">Accueil</a></li>
                 <li class="menu__item"><a class="menu__link" href="/fr/index.html#artistes" @click="menuIsOpen= ! menuIsOpen">Artistes</a></li>
                 <li class="menu__item"><a class="menu__link" href="/fr/oeuvres.html">Oeuvres</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Billetterie</a></li>
                 <li class="menu__item"><a class="menu__link" href="/fr/contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="main">
+    <main>
         <section class="contact">
             <h1 class="title contact__title">Contactez-nous</span></h1>
             <img class="home__img" src="../public/img/The_Mill.webp" alt="The Mill, oeuvre de Henri Rousseau">
