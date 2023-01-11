@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{menuIsOpen: false}" :class="menuIsOpen && 'noScroll'">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primitivism</title>
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <a href="/fr/index.html"><h1 class="title header__title">Primitiv<span class="span__title span__title">ism</span></h1></a>
+            <button class="button menu__button" @click="menuIsOpen= ! menuIsOpen">
+                <img class="menu__icn" src="/public/icn/logo_menu.svg" alt="ouvrir le menu">
+            </button>
+        </div>
+
+        <nav x-show="menuIsOpen" class="header__menu" x-transition.duration.600ms>
+            <button class="button menu__button" @click="menuIsOpen= ! menuIsOpen">
+            <img class="menu__icn" src="/public/icn/croix_menu.svg" alt="fermer le menu">
+        </button>
+            <ul class="menu__list">
+                <li class="menu__item"><a class="menu__link" href="/fr/index.html">Accueil</a></li>
+                <li class="menu__item"><a class="menu__link" href="/fr/index.html#artistes" @click="menuIsOpen= ! menuIsOpen">Artistes</a></li>
+                <li class="menu__item"><a class="menu__link" href="/fr/oeuvres.html">Oeuvres</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Billetterie</a></li>
+                <li class="menu__item"><a class="menu__link" href="/fr/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="art__presentation">
+            <h1>Moi-même</h1>
+            <img src="/public/img/moi_meme.webp" alt="Moi-même, 1890">
+            <p><span class="art__presentation--title ">Date :</span>1890</p>
+            <p><span class="art__presentation--title">Mouvement artistique :</span>Primitivisme</p>
+            <p><span class="art__presentation--title">Domaine :</span>Peinture</p>
+            <p class="art__presentation--text">"Moi-même" est une peinture de <span class="artist__presentation--span">Henri Rousseau</span>, réalisée en 1907. Elle représente l'artiste lui-même, debout, tenant un pinceau et un pot de peinture dans un paysage apaisant.
+                Rousseau a choisi de se représenter de manière réaliste, avec une grande attention aux détails de son visage et de ses vêtements.
+            </p>
+            <p>On peut voir la finesse de ses traits et la profondeur de son regard. Sa posture est fière et déterminée, reflétant <span  class="artist__presentation--span">sa passion pour la peinture</span>.
+                C’est une peinture emblématique de l'art de Rousseau et de sa vision de l'artiste. Elle montre sa confiance en son talent et en sa capacité à créer de grandes œuvres d'art. Elle est aujourd'hui considérée comme l'une des peintures les plus célèbres de l'artiste et est exposée dans de nombreux musées à travers le monde.
+            </p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <h1 class="title footer__title">Primitiv<span class="span__title span__title--footer">ism</span></h1>
+        <ul class="footer__list">
+            <li><a class="footer__link" href="index.html">Accueil</a></li>
+            <li><a class="footer__link" href="oeuvres.html">Oeuvres</a></li>
+            <li><a class="footer__link" href="#">Billetterie</a></li>
+        </ul>
+        <a href="contact.html"><p class="home__button button__contact">CONTACT</p></a>
+    </footer>
+</body>
+</html>

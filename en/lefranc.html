@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{menuIsOpen: false}" :class="menuIsOpen && 'noScroll'">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primitivism</title>
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <a href="/fr/index.html"><h1 class="title header__title">Primitiv<span class="span__title span__title">ism</span></h1></a>
+            <button class="button menu__button" @click="menuIsOpen= ! menuIsOpen">
+                <img class="menu__icn" src="/public/icn/logo_menu.svg" alt="ouvrir le menu">
+            </button>
+        </div>
+
+        <nav x-show="menuIsOpen" class="header__menu" x-transition.duration.600ms>
+            <button class="button menu__button" @click="menuIsOpen= ! menuIsOpen">
+            <img class="menu__icn" src="/public/icn/croix_menu.svg" alt="fermer le menu">
+        </button>
+            <ul class="menu__list">
+                <li class="menu__item"><a class="menu__link" href="/fr/index.html">Accueil</a></li>
+                <li class="menu__item"><a class="menu__link" href="/fr/index.html#artistes" @click="menuIsOpen= ! menuIsOpen">Artistes</a></li>
+                <li class="menu__item"><a class="menu__link" href="/fr/oeuvres.html">Oeuvres</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Billetterie</a></li>
+                <li class="menu__item"><a class="menu__link" href="/fr/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="artist__presentation">
+            <h1 class="artist__title">Jules Lefranc</h1>
+            <img class="artist__img" src="/public/img/artist_lefranc.webp" alt="Jules Lefranc">
+            <p class="artist__presentation--text"><span class="artist__presentation--span">Jules Lefranc</span> était un peintre français du début du XXe siècle qui a été associé au mouvement du primitivisme. Lefranc est considéré comme un artiste important de la fin du 19ème siècle et du début du 20ème siècle, et ses œuvres sont exposées dans <span class="artist__presentation--span">de nombreux musées et galeries d'art</span> en France et à l'étranger.</p>
+            <p class="artist__presentation--text">Sa peinture est caractérisée par son utilisation de couleurs vives et lumineuses, et il a été particulièrement connu pour ses peintures de scènes de genre, comme les marchés, les fêtes et les scènes de vie quotidienne.</p>
+            <section class="frise">
+                <h3 class="frise__title title__h3">FRISE CHRONOLOGIQUE</h3>
+                <a href="/fr/rousseau.html">
+                    <div class="frise__item">
+                        <img class="frise__img" src="/public/img/artist_rousseau.webp" alt="Henri Rousseau">
+                        <div class="frise__info">
+                            <h2 class="frise__title--info">Henri Rousseau</h2>
+                            <p class="frise__text">1844 - 1910</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/fr/lefranc.html">
+                    <div class="frise__item">
+                        <img class="frise__img" src="/public/img/artist_lefranc.webp" alt="Jules Lefranc">
+                        <div class="frise__info">
+                            <h2 class="frise__title--info">Jules Lefranc</h2>
+                            <p class="frise__text">1877 - 1972</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/fr/ludwig.html">
+                    <div class="frise__item">
+                        <img class="frise__img" src="/public/img/artist_ludwig.webp" alt="Ludwig Bemelmans">
+                        <div class="frise__info">
+                            <h2 class="frise__title--info">Ludwig Bemelmans</h2>
+                            <p class="frise__text">1889 - 1962</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/fr/sendak.html">
+                    <div class="frise__item">
+                        <img class="frise__img" src="/public/img/artist_sendak.webp" alt="Maurice Sendak">
+                        <div class="frise__info">
+                            <h2 class="frise__title--info">Maurice Sendak</h2>
+                            <p class="frise__text">1928 - 2012</p>
+                        </div>
+                    </div>
+                </a>
+            </section>
+            <section class="more">
+                <h3 class="more__title title__h3">CERTAINES DE SES OEUVRES</h3>
+                <article class="work">
+                    <a href="metro.html">
+                        <img class="work__img" src="/public/img/metro_aerien.webp" alt="Le métro aerien">
+                        <p class="work__title">Le Métro aerien</p>
+                        <p class="work__date">?</p>
+                    </a>
+                </article>
+                <article class="work">
+                    <a href="fleuriste.html">
+                        <img class="work__img" src="/public/img/petite_fleuriste.webp" alt="La petite fleuriste, 1953">
+                        <p class="work__title">La petite fleuriste</p>
+                        <p class="work__date">1953</p>
+                    </a>
+                </article>
+            </section>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <h1 class="title footer__title">Primitiv<span class="span__title span__title--footer">ism</span></h1>
+        <ul class="footer__list">
+            <li><a class="footer__link" href="index.html">Accueil</a></li>
+            <li><a class="footer__link" href="oeuvres.html">Oeuvres</a></li>
+            <li><a class="footer__link" href="#">Billetterie</a></li>
+        </ul>
+        <a href="contact.html"><p class="home__button button__contact">CONTACT</p></a>
+    </footer>
+</body>
+</html>

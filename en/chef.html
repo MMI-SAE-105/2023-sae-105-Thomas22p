@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{menuIsOpen: false}" :class="menuIsOpen && 'noScroll'">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primitivism</title>
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <a href="/fr/index.html"><h1 class="title header__title">Primitiv<span class="span__title span__title">ism</span></h1></a>
+            <button class="button menu__button" @click="menuIsOpen= ! menuIsOpen">
+                <img class="menu__icn" src="/public/icn/logo_menu.svg" alt="ouvrir le menu">
+            </button>
+        </div>
+
+        <nav x-show="menuIsOpen" class="header__menu" x-transition.duration.600ms>
+            <button class="button menu__button" @click="menuIsOpen= ! menuIsOpen">
+            <img class="menu__icn" src="/public/icn/croix_menu.svg" alt="fermer le menu">
+        </button>
+            <ul class="menu__list">
+                <li class="menu__item"><a class="menu__link" href="/fr/index.html">Accueil</a></li>
+                <li class="menu__item"><a class="menu__link" href="/fr/index.html#artistes" @click="menuIsOpen= ! menuIsOpen">Artistes</a></li>
+                <li class="menu__item"><a class="menu__link" href="/fr/oeuvres.html">Oeuvres</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Billetterie</a></li>
+                <li class="menu__item"><a class="menu__link" href="/fr/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="art__presentation">
+            <h1>Chef</h1>
+            <img src="/public/img/chef.webp" alt="Chef">
+            <p><span class="art__presentation--title">Date :</span>Inconnue</p>
+            <p><span class="art__presentation--title">Mouvement artistique :</span>Primitivisme</p>
+            <p><span class="art__presentation--title">Domaine :</span>Peinture</p>
+            <p class="art__presentation--text">"Chef" est une peinture de <span class="artist__presentation--span">Ludwig Bemelmans</span> qui représente un chef cuisinier avec une toque blanche sur la tête et une veste blanche immaculée. Dans cette peinture, on peut voir <span class="artist__presentation--">l'utilisation de couleurs vibrantes</span>, comme le jaune, qui mettent en valeur le personnage principal.</p>
+            <p> C'est une peinture joyeuse et vibrante qui célèbre la passion et la créativité de la cuisine. Elle est un excellent exemple du travail de Bemelmans et de son influence du mouvement artistique du primitivisme, aussi appelé « Naïve Art ».</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <h1 class="title footer__title">Primitiv<span class="span__title span__title--footer">ism</span></h1>
+        <ul class="footer__list">
+            <li><a class="footer__link" href="index.html">Accueil</a></li>
+            <li><a class="footer__link" href="oeuvres.html">Oeuvres</a></li>
+            <li><a class="footer__link" href="#">Billetterie</a></li>
+        </ul>
+        <a href="contact.html"><p class="home__button button__contact">CONTACT</p></a>
+    </footer>
+</body>
+</html>
