@@ -15,13 +15,14 @@
         <div class="header">
             <a href="/fr/index.html"><h1 class="title header__title">Primitiv<span class="span__title span__title">ism</span></h1></a>
             <button class="button menu__button" @click="menuIsOpen= ! menuIsOpen">
-                
-                
+                <img class="menu__icn" src="/public/icn/logo_menu.svg" alt="ouvrir le menu">
             </button>
         </div>
 
         <nav x-show="menuIsOpen" class="header__menu">
-            <button class="button menu__button" @click="menuIsOpen= ! menuIsOpen"></button>
+            <button class="button menu__button" @click="menuIsOpen= ! menuIsOpen">
+            <img class="menu__icn" src="/public/icn/croix_menu.svg" alt="fermer le menu">
+        </button>
             <ul class="menu__list">
                 <li class="menu__item"><a class="menu__link" href="/fr/index.html">Accueil</a></li>
                 <li class="menu__item"><a class="menu__link" href="/fr/index.html#artistes" @click="menuIsOpen= ! menuIsOpen">Artistes</a></li>
